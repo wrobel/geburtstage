@@ -1,4 +1,6 @@
 {
   "name": "geburtstage",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "description": "A companion repository to the JavaScript development toolset book. The repository demonstrates the step-by-step development of a birthday reminder application."
+
 }
