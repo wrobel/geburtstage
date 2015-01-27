@@ -1,6 +1,6 @@
 /* jshint undef: true */
-output = function () {
+var output = function () {
     return 'Gunnar Wrobel hat heute Geburtstag. Kaufe ein Geschenk!';
 };
 
-console.log(outputs());
+console.log(output());
