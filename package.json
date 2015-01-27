@@ -2,6 +2,16 @@
   "name": "geburtstage",
   "version": "0.0.0",
   "description": "A companion repository to the JavaScript development toolset book. The repository demonstrates the step-by-step development of a birthday reminder application.",
+  "author": {
+    "name": "Gunnar Wrobel",
+    "url": "http://gunnarwrobel.de/"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/wrobel/geburtstage/blob/master/LICENSE"
+    }
+  ],
   "homepage": "https://github.com/wrobel/geburtstage",
   "repository": {
     "type": "git",
