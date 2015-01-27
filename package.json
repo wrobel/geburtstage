@@ -12,6 +12,9 @@
       "url": "https://github.com/wrobel/geburtstage/blob/master/LICENSE"
     }
   ],
+  "devDependencies": {
+    "jshint": "2.4.1"
+  },
   "homepage": "https://github.com/wrobel/geburtstage",
   "repository": {
     "type": "git",
