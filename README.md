@@ -1,4 +1,5 @@
-# JavaScript Tools: Besserer Code durch eine professionelle Programmierumgebung
+## JavaScript Tools
+### Besserer Code durch eine professionelle Programmierumgebung
 
 Dieses Repository enthält den kompletten Verlauf des Code-Beispiels des
 Buches
