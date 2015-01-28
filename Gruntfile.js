@@ -1,9 +1,7 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         jshint: {
-            files: {
-                src: ['Gruntfile.js', 'geburtstag.js']
-            },
+            files: ['Gruntfile.js', 'geburtstag.js'],
             options: {
                 jshintrc: true
             }
