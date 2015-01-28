@@ -19,5 +19,22 @@ describe('list', function () {
 
             expect(list.birthdays(birthdayList).length).to.equal(1);
         });
+
+        it('calls hasBirthday for each person in the list and provides the birthday as argument', function () {
+            var birthdayList = [
+                {name: 'John Doe', birthday: '19741212'},
+                {name: 'Hans Mustermann', birthday: '19700101'}
+            ];
+
+            var hasBirthday = sinon.spy();
+            list.__set__('date', { hasBirthday: hasBirthday });
+
+            list.birthdays(birthdayList);
+
+            expect(hasBirthday.callCount).to.equal(birthdayList.length);
+            expect(hasBirthday.firstCall.calledWithExactly('19741212')).to.be.ok;
+            expect(hasBirthday.secondCall.calledWithExactly('19700101')).to.be.ok;
+        });
+
     });
 });
