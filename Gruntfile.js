@@ -5,10 +5,12 @@ module.exports = function (grunt) {
     grunt.initConfig({
         path: {
             src: [
-                'lib/date.js'
+                'lib/date.js',
+                'lib/list.js'
             ],
             test: [
-                'test/unit/date.js'
+                'test/unit/date.js',
+                'test/unit/list.js'
             ],
             lint: [
                 'Gruntfile.js',
