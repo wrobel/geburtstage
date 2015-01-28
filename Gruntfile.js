@@ -4,9 +4,16 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         path: {
+            src: [
+                'lib/date.js'
+            ],
+            test: [
+                'test/unit/date.js'
+            ],
             lint: [
                 'Gruntfile.js',
-                'geburtstag.js'
+                '<%= path.src %>',
+                '<%= path.test %>'
             ]
         },
         jshint: {
@@ -15,15 +22,21 @@ module.exports = function (grunt) {
                 jshintrc: true
             }
         },
+        mochaTest: {
+            test: {
+                src: '<%= path.test %>'
+            }
+        },
         watch: {
             files: '<%= path.lint %>',
-            tasks: ['jshint']
+            tasks: ['jshint', 'mochaTest:test']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-notify');
 
-    grunt.registerTask('default', 'jshint');
+    grunt.registerTask('default', ['jshint', 'mochaTest:test']);
 };
