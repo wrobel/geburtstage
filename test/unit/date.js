@@ -1,6 +1,3 @@
-/* global describe, it, require */
-/* jshint expr: true */
-
 var expect = require('chai').expect; 
 var date = require('../../lib/date');
 

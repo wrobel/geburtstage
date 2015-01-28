@@ -1,0 +1,17 @@
+{
+    // Relaxing options
+
+    // Tests may use expressions
+    "expr":       true,
+
+    "globals": {
+        "__dirname": true,
+        "after": true,
+        "afterEach": true,
+        "before": true,
+        "beforeEach": true,
+        "it": true,
+        "describe": true,
+        "require": true
+    }
+}
