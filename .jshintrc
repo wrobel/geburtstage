@@ -1,0 +1,33 @@
+{
+    // Verstärkende Optionen:
+    "bitwise":       true,
+    "camelcase":     true,
+    "curly":         true,
+    "eqeqeq":        true,
+    "forin":         true,
+    "freeze":        true,
+    "immed":         true,
+    "latedef":       true,
+    "maxcomplexity":   10,
+    "maxdepth":         5,
+    "maxlen":         120,
+    "maxparams":       10,
+    "maxstatements":   20,
+    "newcap":        true,
+    "noarg":         true,
+    "noempty":       true,
+    "nonbsp":        true,
+    "nonew":         true,
+    "quotmark":      true,
+    "strict":        true,
+    "trailing":      true,
+    "undef":         true,
+    "unused":        true,
+    "indent":           2,
+
+    // Abschwächende Optionen:
+
+    // Globale Variablen:
+    "globals": {
+    }
+}
