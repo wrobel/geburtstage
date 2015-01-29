@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+/*global require*/
+
+var commander = require('commander');
+var cli = new commander.Command('geburtstage');
+
+cli.version('0.0.0')
+    .option(
+        '-f, --file [path]',
+        'Path to the file that contains the list of birthdays [geburtstage.json].',
+        'geburtstage.json'
+    )
+    .parse(process.argv);
