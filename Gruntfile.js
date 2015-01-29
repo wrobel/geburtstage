@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         path: {
             src: [
+                'bin/geburtstage',
                 'lib/date.js',
                 'lib/list.js'
             ],

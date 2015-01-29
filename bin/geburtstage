@@ -2,6 +2,8 @@
 
 /*global require*/
 
+var fs = require('fs');
+var list = require('../lib/list');
 var commander = require('commander');
 var cli = new commander.Command('geburtstage');
 
@@ -12,3 +14,18 @@ cli.version('0.0.0')
         'geburtstage.json'
     )
     .parse(process.argv);
+
+
+function load(err, data) {
+    'use strict';
+    if (err) {
+        console.log('Failed reading birthday list!');
+        console.log(err);
+    } else {
+        list.birthdays(JSON.parse(data)).map(function (value) {
+            console.log(value + ' hat heute Geburtstag. Kaufe ein Geschenk!');
+        });
+    }
+}
+
+fs.readFile(cli.file, load);
