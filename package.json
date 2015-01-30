@@ -30,7 +30,7 @@
     "karma-firefox-launcher": "0.1.4",
     "karma-mocha": "0.1.10",
     "karma-webpack": "1.5.0",
-    "jshint": "2.4.x",
+    "jshint": "2.6.0",
     "jshint-stylish": "1.0.0",
     "mocha": "2.1.0",
     "rewire": "2.1.4",
