@@ -30,16 +30,23 @@ module.exports = function (grunt) {
                 src: '<%= path.test %>'
             }
         },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                singleRun: true
+            }
+        },
         watch: {
             files: '<%= path.lint %>',
-            tasks: ['jshint', 'mochaTest:test']
+            tasks: ['jshint', 'mochaTest:test', 'karma:unit']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-notify');
 
-    grunt.registerTask('default', ['jshint', 'mochaTest:test']);
+    grunt.registerTask('default', ['jshint', 'mochaTest:test', 'karma:unit']);
 };
