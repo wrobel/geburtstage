@@ -26,6 +26,17 @@ module.exports = function (grunt) {
                 jshintrc: true
             }
         },
+        jscs: {
+	    all: {
+		files: {
+		    src: ['lib', 'test']
+		},
+		options: {
+		    preset: 'crockford',
+		    reporter: 'inline'
+		}
+	    }
+	},
         mochaTest: {
             test: {
                 src: '<%= path.test %>'
@@ -54,10 +65,11 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-jscs');
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-webpack');
 
-        grunt.registerTask('default', ['jshint', 'mochaTest:test', 'karma:unit', 'webpack']);
+    grunt.registerTask('default', ['jshint', 'jscs', 'mochaTest:test', 'karma:unit', 'webpack']);
 };
