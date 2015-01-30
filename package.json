@@ -25,6 +25,7 @@
     "grunt-karma": "0.10.1",
     "grunt-webpack": "1.0.8",
     "imports-loader": "0.6.3",
+    "jscs": "1.10.0",
     "karma": "0.12.31",
     "karma-chrome-launcher": "0.1.7",
     "karma-firefox-launcher": "0.1.4",
