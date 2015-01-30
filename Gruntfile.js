@@ -6,6 +6,7 @@ module.exports = function (grunt) {
         path: {
             src: [
                 'bin/geburtstage',
+                'lib/angular.js',
                 'lib/date.js',
                 'lib/list.js'
             ],
