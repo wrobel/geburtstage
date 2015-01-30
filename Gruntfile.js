@@ -39,7 +39,16 @@ module.exports = function (grunt) {
         },
         watch: {
             files: '<%= path.lint %>',
-            tasks: ['jshint', 'mochaTest:test', 'karma:unit']
+            tasks: ['default']
+        },
+        webpack: {
+            birthdays: {
+                output: {
+                    path: './build/',
+                    filename: 'birthdays.js'
+                },
+                entry: './lib/angular.js'
+            }
         }
     });
 
@@ -48,6 +57,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-webpack');
 
-    grunt.registerTask('default', ['jshint', 'mochaTest:test', 'karma:unit']);
+        grunt.registerTask('default', ['jshint', 'mochaTest:test', 'karma:unit', 'webpack']);
 };
