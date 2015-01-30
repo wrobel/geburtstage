@@ -45,16 +45,15 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global angular, require */
-	var list = __webpack_require__(1);
-
-	var birthdayApp = angular.module('birthdayApp', []);
+	var list = __webpack_require__(1),
+	    birthdayApp = angular.module('birthdayApp', []);
 
 	birthdayApp.controller('BirthdayListCtrl', function ($scope) {
 	    'use strict';
 	    $scope.allBirthdays = [];
 	    $scope.birthdays = [];
 
-	    $scope.newBirthday = function() {
+	    $scope.newBirthday = function () {
 	        $scope.allBirthdays = $scope.allBirthdays.concat([
 	            {name: $scope.name, birthday: $scope.birthday}
 	        ]);
@@ -81,8 +80,9 @@
 
 	        var result = [],
 	            persons = birthdayList.length,
-	            person;
-	        for (var index = 0; index < persons; index += 1) {
+	            person,
+	            index;
+	        for (index = 0; index < persons; index += 1) {
 	            person = birthdayList[index];
 	            if (date.hasBirthday(person.birthday)) {
 	                result.push(person.name);
@@ -109,12 +109,12 @@
 	        return current.getDate() === birthday.getDate() &&
 	               current.getMonth() === birthday.getMonth();
 	    },
-	    fromYyyyMmDd: function(date) {
+	    fromYyyyMmDd: function (date) {
 	        'use strict';
 	        return new Date(
-	            date.substring(0,4),
-	            + date.substring(4,6) - 1,
-	            date.substring(6,8)
+	                date.substring(0, 4),
+	                date.substring(4, 6) - 1,
+	                date.substring(6, 8)
 	        );
 	    }
 	};

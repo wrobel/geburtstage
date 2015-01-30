@@ -1,5 +1,5 @@
-var expect = require('chai').expect; 
-var date = require('../../lib/date');
+var expect = require('chai').expect,
+    date = require('../../lib/date');
 
 describe('date', function () {
     'use strict';
@@ -15,13 +15,13 @@ describe('date', function () {
 
     describe('hasBirthday', function () {
         it('accepts string parameters', function () {
-            function stringBirthday () {
+            function stringBirthday() {
                 var pad = function (n) {
-                    return n < 10 ? '0' + n : n;
-                };
-                var d = new Date();
+                        return n < 10 ? '0' + n : n;
+                    },
+                    d = new Date();
                 return '1974' +
-                    pad(d.getMonth()+1) +
+                    pad(d.getMonth() + 1) +
                     pad(d.getDate());
             }
             expect(date.hasBirthday(stringBirthday())).to.be.ok;
